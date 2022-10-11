@@ -1,0 +1,57 @@
+LinearEquation class
+
+Step 1. Create four new private double variables (xOne, yOne, xTwo, yTwo) Also make two private strings (pointOne, pointTwo)
+
+Step 2. Make the constructor "public LinearEquation" which will have double parameters in this order:
+        (xOne, yOne, xTwo, yTwo) and String parameters (pointOne, pointTwo)
+        A. using a this. statement make sure the variables in Step 1 equal the parameters in step 2.
+
+Step 3. Make "public double slopeNumerical" that will plug in xOne, yOne, xTwo, yTwo into slope a slope formula and
+        return the slope as a decimal.
+
+Step 4. Make "public String slopeFractional" that will do the same as "public double slopeNumerical" except return the
+        slope in proper fraction form, this will be useful for printing later.
+
+Step 5. Make a "public double yIntercept" that will find the y intercept, aka the value when X = 0. This will return
+        the y intercept.
+
+Step 6. Make a "public String makeEquation" that will return the formatted linear equation.
+        "y = " + slopeFractional + "x" + yIntercept.
+
+Step 7. Make a "public double distance" that will return the distances between both coordinate points
+
+Step 8. Make a "public String toString()" method to return pointOne, pointTwo, slopeFractional, yIntercept, makeEquation,
+        and distance as one large text.
+
+Step 9. Make a "void coordinate point" that will calculate the y point to the x using the slopeNumberical and yIntercept.
+        Then print the x and y points as a String in (x,y) format.
+
+EquationRunner.java
+
+ Step 1. Set up main and scanner class, name scanner under variable S.
+
+ Step 2. Ask the user to input the first set of coordinate points in the format of (x,y) and all numbers being integers
+         A. store this under String "pointOne"
+
+ Step 3. Get the second set of coordinate points from the user, same format as step 2.
+         A. store this under String "pointTwo"
+
+ Step 4. Split the first coordinate point (pointOne) into a x and y value
+         A. Using index or string, fine the position of the "," in pointOne, store this in value int "comma"
+         B. Create new int "xOne" with the x values from pointOne: use a double parameter substring method going from
+         1 to the index of"comma," this will leave only the x value which will then be converted into an int and stored
+         under "xOne," the substring takes the int to value and goes to it - 1, which means the "," will be removed
+         C. Create new int "yOne" with the y value from pointOne: using a double parameter substring method start at
+         index "comma" + 1 and end at length() of pointOne
+
+ Step 5. Split the second coordinate point (pointTwo) into a x and y value
+         A. Using the same method in Step 4, except store values in xTwo and yTwo and use pointTwo for the location
+         of the comma and length of string.
+
+ Step 6. Create a new object "equation" with parameters entered in this order xOne, yOne, xTwo, yTwo, pointOne, pointTwo
+
+ Step 7. Print the object "equation"
+
+ Step 8. Ask the user for any x coordinate point, store it in xThree and call the equation.coordinates void method
+         with a parameter of the user's inputed x.
+
