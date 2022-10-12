@@ -18,7 +18,8 @@ Step 5. Make a "public double yIntercept" that will find the y intercept, aka th
 Step 6. Make a "public String makeEquation" that will return the formatted linear equation.
         "y = " + slopeFractional + "x" + yIntercept.
 
-Step 7. Make a "public double distance" that will return the distances between both coordinate points
+Step 7. Make a "public double distance" that will return the distances between both coordinate points rounded to the
+        nearest hundredth
 
 Step 8. Make a "public String toString()" method to return pointOne, pointTwo, slopeFractional, yIntercept, makeEquation,
         and distance as one large text.
@@ -37,12 +38,13 @@ EquationRunner.java
          A. store this under String "pointTwo"
 
  Step 4. Split the first coordinate point (pointOne) into a x and y value
-         A. Using index or string, fine the position of the "," in pointOne, store this in value int "comma"
-         B. Create new int "xOne" with the x values from pointOne: use a double parameter substring method going from
-         1 to the index of"comma," this will leave only the x value which will then be converted into an int and stored
-         under "xOne," the substring takes the int to value and goes to it - 1, which means the "," will be removed
-         C. Create new int "yOne" with the y value from pointOne: using a double parameter substring method start at
-         index "comma" + 1 and end at length() of pointOne
+         A. Using index of string, fine the position of the "," in pointOne, store this in value int "comma"
+         B. Create new double "xOne" with the x values from pointOne: use the two parameter substring method going from
+         1 to the index of"comma," this will leave only the x value which will then be converted into a double via
+         Double.parseDouble and stored under "xOne," the substring takes the comma value and goes to it - 1, which means
+         the "," will be removed
+         C. Create new double "yOne" with the y value from pointOne: using the two parameter substring method start at
+         index "comma" + 1 and end at length()-1 of pointOne since we want to remove the ")" at the end
 
  Step 5. Split the second coordinate point (pointTwo) into a x and y value
          A. Using the same method in Step 4, except store values in xTwo and yTwo and use pointTwo for the location
