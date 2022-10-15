@@ -21,6 +21,13 @@ public class EquationRunner {
 
         //Creating new object "equation"
         LinearEquation equation = new LinearEquation(xOne,yOne,xTwo,yTwo,pointOne,pointTwo);
-        System.out.print(equation);
+        System.out.println(equation);
+
+        //Asking user for any x coordinate
+        System.out.println("Please input any x value you wish to calculate the y value for:");
+        double xThree = s.nextDouble();
+
+        //Printing out the x, y value coordinates
+        equation.coordinates(xThree);
     }
 }

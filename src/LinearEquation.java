@@ -31,9 +31,9 @@ public class LinearEquation {
 
     //Slope calculator with a fractional slope format!
     public String slopeFractional(){
-        double rise = (yTwo - yOne);
-        double run =  (xTwo - xOne);
-        String slopeFraction = d.format(rise) + "/" + d.format(run);
+        int rise = (int) (yTwo - yOne);
+        int run =  (int) (xTwo - xOne);
+        String slopeFraction = rise + "/" + run;
         return slopeFraction;
     }
 
@@ -63,5 +63,11 @@ public class LinearEquation {
                 + "\nSlope of the line: " + d.format(slopeNumerical()) + "\nY-intercept: " + d.format(yIntercept())
                 + "\nSlope intercept form: " + makeEquation() + "\nDistance between points: " + distance();
         return output;
+    }
+
+    //Calculates the y point to whatever x was entered using the previously found Y-intercept and slope.
+    public void coordinates(double x){
+        double y = (slopeNumerical() * x) + yIntercept();
+        System.out.println("Solved Coordinate point: ("+ x + "," + y + ")");
     }
 }

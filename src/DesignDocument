@@ -24,8 +24,9 @@ Step 7. Make a "public double distance" that will return the distances between b
 Step 8. Make a "public String toString()" method to return pointOne, pointTwo, slopeFractional, yIntercept, makeEquation,
         and distance as one large text.
 
-Step 9. Make a "void coordinate point" that will calculate the y point to the x using the slopeNumberical and yIntercept.
-        Then print the x and y points as a String in (x,y) format.
+Step 9. Make a "void coordinates(double x)" that will calculate the y point to any entered x using the slopeNumberical and yIntercept.
+        Then print the x and y points as a String in (x,y) format. This program will have one parameter called x which
+        Is a double.
 
 EquationRunner.java
 
