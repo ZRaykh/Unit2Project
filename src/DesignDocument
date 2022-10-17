@@ -1,6 +1,7 @@
 LinearEquation class
 
-Step 1. Create four new private double variables (xOne, yOne, xTwo, yTwo) Also make two private strings (pointOne, pointTwo)
+Step 1. Import and define Decimal Format and create four new private double variables (xOne, yOne, xTwo, yTwo)
+        Also make two private strings (pointOne, pointTwo)
 
 Step 2. Make the constructor "public LinearEquation" which will have double parameters in this order:
         (xOne, yOne, xTwo, yTwo) and String parameters (pointOne, pointTwo)
